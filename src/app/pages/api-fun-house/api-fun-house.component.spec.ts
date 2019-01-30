@@ -16,8 +16,8 @@ describe('MyMenuComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ APIFunHouseComponent, StripHtmlPipe ],
       imports: [
-        HttpModule, 
-        NgbModule.forRoot(),  
+        HttpModule,
+        NgbModule.forRoot(),
         ThemeModule.forRoot(),
         CoreModule.forRoot(),
         ThemeModule,

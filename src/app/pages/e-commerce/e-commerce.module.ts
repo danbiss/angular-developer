@@ -54,7 +54,8 @@ import { NbComponentsModule } from '../nb.components.module';
     NgxEchartsModule,
     NgxChartsModule,
     LeafletModule,
-    NbComponentsModule //I made this and imported the components here so they are avalible. You can use this on your custom module too.
+    NbComponentsModule
+    // I made this and imported the components here so they are avalible. You can use this on your custom module too.
   ],
   declarations: [
     ECommerceComponent,

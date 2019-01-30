@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
   `,
 })
 export class FooterComponent {
-  date: Date = new Date()
-  
+  date: Date = new Date();
+
 }

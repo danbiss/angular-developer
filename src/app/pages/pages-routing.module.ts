@@ -12,29 +12,28 @@ const routes: Routes = [{
   component: PagesComponent,
   children: [{
     path: 'dashboard',
-    component: ECommerceComponent,
-  }, 
-  { 
+    component: ECommerceComponent
+  },
+  {
     path: 'api-fun-house',
-    component: APIFunHouseComponent,
-  }, 
-  
-  { 
+    component: APIFunHouseComponent
+  },
+  {
     path: 'instructions',
-    component: InstructionsComponent,
-  }, 
+    component: InstructionsComponent
+  },
   {
     path: 'miscellaneous',
-    loadChildren: './miscellaneous/miscellaneous.module#MiscellaneousModule',
-  }, 
+    loadChildren: './miscellaneous/miscellaneous.module#MiscellaneousModule'
+  },
   {
     path: '',
     redirectTo: 'instructions',
-    pathMatch: 'full',
-  }, 
+    pathMatch: 'full'
+  },
   {
     path: '**',
-    component: NotFoundComponent,
+    component: NotFoundComponent
   }],
 }];
 

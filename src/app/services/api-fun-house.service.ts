@@ -9,32 +9,33 @@ export class APIFunHouseService {
 
   jeopardyURL = 'http://jservice.io/api/random';
   numberURL = 'http://numbersapi.com';
-  nasaURL = 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=Ov0OrglTkmYVrHgkVUK7t8nzt9adhhUO5RpvF5c9';
+  nasaURL = 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?';
+  nasaQueryString = 'sol=1000&api_key=Ov0OrglTkmYVrHgkVUK7t8nzt9adhhUO5RpvF5c9';
 
   constructor(private http: Http) { }
 
-  getRandomQuestion(){
-    let endpoint = this.jeopardyURL;
+  getRandomQuestion() {
+    const endpoint = this.jeopardyURL;
     return this.http.get(endpoint)
       .map(res => {
         return res.json();
-      })
+      });
   }
 
-  getNumberFact(number: string){
-    let endpoint =  `${this.numberURL}/${number}`;
+  getNumberFact(number: string) {
+    const endpoint =  `${this.numberURL}/${number}`;
     return this.http.get(endpoint)
       .map(res => {
         return res.text();
-      })
+      });
   }
 
-  getNasaImg(){
-    let endpoint =  this.nasaURL;
+  getNasaImg() {
+    const endpoint =  this.nasaURL + this.nasaQueryString;
     return this.http.get(endpoint)
       .map(res => {
         return res.json();
-      })
+      });
   }
 
 

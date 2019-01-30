@@ -4,9 +4,9 @@
   ],
   "rules": {
     "trailing-comma": [
-      true,
+      false,
       {
-        "multiline": "always",
+        "multiline": "never",
         "singleline": "never"
       }
     ],
@@ -31,7 +31,7 @@
     "label-position": true,
     "max-line-length": [
       true,
-      120
+      240
     ],
     "member-access": false,
     "no-arg": true,
@@ -95,12 +95,11 @@
     "unified-signatures": true,
     "variable-name": false,
     "whitespace": [
-      true,
+      false,
       "check-branch",
       "check-decl",
       "check-operator",
-      "check-separator",
-      "check-type"
+      "check-separator"
     ],
     "directive-selector": [
       true,

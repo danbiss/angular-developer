@@ -64,5 +64,4 @@ const PAGES_COMPONENTS = [
   ]
 })
 export class NbComponentsModule {
-  
 }

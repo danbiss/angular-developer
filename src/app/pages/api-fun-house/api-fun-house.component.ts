@@ -36,25 +36,23 @@ export class APIFunHouseComponent implements OnInit {
   getNumberFact() {
     this.myMenuService.getNumberFact(this.selectedItem).subscribe(res => {
       this.numberFact = res;
-    })
+    });
   }
 
   getNasaData() {
     this.myMenuService.getNasaImg().subscribe(res => {
-      this.nasaJSON = res
-      this.nasaJSON = this.nasaJSON.photos.filter(x =>{
+      this.nasaJSON = res;
+      this.nasaJSON = this.nasaJSON.photos.filter(x => {
         return x.camera.name === 'MAST';
       });
-      console.log(this.nasaJSON);
       this.maxNum = this.nasaJSON.length;
-      console.log(this.maxNum);
       this.getRandomPhoto();
 
-    })
+    });
   }
 
   getRandomPhoto() {
-    let index = Math.floor(Math.random() * (this.maxNum - 1)) + 0;
+    const index = Math.floor(Math.random() * (this.maxNum - 1)) + 0;
     this.nasaImgSrc = this.nasaJSON[index].img_src;
     this.loading = false;
   }

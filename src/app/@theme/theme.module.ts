@@ -50,8 +50,8 @@ import { DEFAULT_THEME } from './styles/theme.default';
 import { COSMIC_THEME } from './styles/theme.cosmic';
 import { CORPORATE_THEME } from './styles/theme.corporate';
 import { RouterModule } from '@angular/router';
-//import { UserNotificationService } from './components/header/header.notification.service';
-//import { NotificationFunctionService } from './components/header/notification.service';
+// import { UserNotificationService } from './components/header/header.notification.service';
+// import { NotificationFunctionService } from './components/header/notification.service';
 
 const BASE_MODULES = [CommonModule, FormsModule, ReactiveFormsModule];
 
@@ -117,9 +117,9 @@ const NB_THEME_PROVIDERS = [
   exports: [...BASE_MODULES, ...NB_MODULES, ...COMPONENTS, ...PIPES],
   declarations: [...COMPONENTS, ...PIPES],
   entryComponents: [...ENTRY_COMPONENTS],
-  providers: [ 
-    //UserNotificationService, 
-    //NotificationFunctionService 
+  providers: [
+    // UserNotificationService,
+    // NotificationFunctionService
   ]
 })
 export class ThemeModule {
